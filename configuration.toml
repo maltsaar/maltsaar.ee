@@ -1,0 +1,48 @@
+[blog]
+generate_blog = true
+generate_rss_feed = true
+# https://pygments.org/styles/
+pygments_theme = "github-dark"
+
+[blog.rss]
+# Must contain: scheme, host, port (Only if not 443 or 80)
+base_url = "http://localhost:8000"
+language = "en"
+title = "Robert Maltsaar"
+description = "Mostly my thoughts on technical stuff I find interesting or useful."
+
+# [global_template_vars] is mandatory
+# global jinja2 variables that should be available in every template
+[global_template_vars]
+link_style = "link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+
+[[global_template_vars.nav.elements]]
+type = "page"
+title = "Home"
+url = "/"
+for_page = "index"
+
+[[global_template_vars.nav.elements]]
+type = "page"
+title = "Blog"
+url = "/blog"
+for_page = "blog"
+
+#[[global_template_vars.nav.elements]]
+#type = "link"
+#title = "CV"
+#url = "/assets/cv/cv.pdf"
+#new_tab = true
+
+[pages]
+
+# [pages.index] is mandatory
+# index gets matched to ./content-templates/index.html.jinja
+[pages.index]
+
+# these jinja2 variables are only available for the index.html.jinja template
+[pages.index.template_vars]
+photo = "/assets/images/me.jpeg"
+
+[pages.404]
+root = true

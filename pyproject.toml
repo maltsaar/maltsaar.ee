@@ -1,0 +1,26 @@
+[project]
+name = "create_website"
+version = "0.1.0"
+description = "Static site generator"
+readme = "README.md"
+authors = [{ name = "maltsaar", email = "robert.maltsaar@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = [
+    "cerberus>=1.3.7",
+    "feedgen>=1.0.0",
+    "jinja2>=3.1.5",
+    "mistune>=3.1.0",
+    "pygments>=2.19.1",
+]
+
+[project.scripts]
+create_website = "create_website:main"
+clean = "create_website:clean"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"

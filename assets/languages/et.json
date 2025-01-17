@@ -1,0 +1,26 @@
+{
+  "globalContent": {
+    "nav-1": "Kodu",
+    "nav-2": "Blogi",
+    "nav-4": "Lingid",
+    "404_p": "Lehte ei leitud. Võite tagasi minna <a class=\"link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover\" href=\"/\">avalehele</a>."
+  },
+  "pageContent": {
+    "index": {
+      "hi_h1": "Tere",
+      "hi_p": "Minu nimi on Robert Maltsaar ja sa oled jõudnud mu veebilehele.",
+
+      "about_h2": "Minust",
+      "about_p_1": "Olen kogenud süsteemiadministraator ja DevOps insener, kellel on üle viie aasta kogemust IT-sektoris.",
+      "about_p_2": "Mulle meeldib lahendada keerulisi probleeme Unixi laadsetes keskkondades, kus saan oma tehnilisi teadmisi ja oskusi rakendada.",
+      "about_p_oss": "Selle veebilehe lähtekood on avalik ja saadaval <a class=\"link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover\" href=\"https://github.com/maltsaar.ee\">GitHubis</a>.",
+      "contact_h2": "Kontakt"
+    },
+
+    "blog": {
+      "blog_h1": "Blogi",
+      "blog_span": "Põhiliselt minu mõtted tehnilistel asjadel mis mulle huvi pakuvad või kasuks tulevad. <a class=\"link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover\" href=\"rss.xml\">RSS-voog</a>.",
+      "blog_h2": "Artiklid"
+    }
+  }
+}

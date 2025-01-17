@@ -1,0 +1,73 @@
+{% extends "base.html.jinja" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="row">
+    <!-- left block -->
+    <div class="col-lg">
+        <h1 data-i18n="hi_h1">Hi</h1>
+        <div class="ps-3">
+            <p data-i18n="hi_p">My name is Robert Maltsaar and you've reached my website.</p>
+        </div>
+        <h2 data-i18n="about_h2">About me</h2>
+        <div class="ps-3">
+            <p data-i18n="about_p_1">I am an experienced system administrator and DevOps Engineer with over 5 years of professional experience in the IT sector.</p>
+            <p data-i18n="about_p_2">I enjoy solving complex challenges in Unix-like environments where I can apply my skills and technical knowledge.</p>
+        </div>
+        <p data-i18n="about_p_oss" class="mt-4">This website is Open Source and the code is available on <a class="{{ gtv.link_style }}" href="https://github.com/maltsaar">GitHub</a>.</p>
+    </div>
+
+    <!-- right block -->
+    <div class="col-sm-auto col-lg-3 offset-lg-1 mb-3">
+        <div class="d-flex justify-content-center">
+            <div class="w-75">
+                <img class="rounded img-fluid" src="{{ tv.photo }}">
+            </div>
+        </div>
+
+        <div class="mt-2 d-flex flex-column">
+            <h2 data-i18n="contact_h2" class="text-center">Contact</h2>
+            <table class="table table-borderless">
+                <tr>
+                    <td class="text-center border-end border-bottom">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </td>
+                    <td class="border-bottom">
+                        <a class="{{ gtv.link_style }}" href="mailto:robert@maltsaar.ee">robert@maltsaar.ee</a>
+                    </td>
+                </tr>
+                <!-- LinkedIn placeholder
+                <tr>
+                    <td class="text-center border-end border-bottom">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    </td>
+                    <td class="border-bottom">
+                        <a class="{{ gtv.link_style }}" href="https://linkedin.com/in/placeholder">linkedin.com/in/placeholder</a>
+                    </td>
+                </tr>
+                -->
+                <tr>
+                    <td class="text-center border-end">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </td>
+                    <td>
+                        <a class="{{ gtv.link_style }}" href="https://github.com/maltsaar">github.com/maltsaar</a>
+                    </td>
+                </tr>
+
+                <!-- gpg placeholder
+                <tr>
+                    <td class="text-center border-end">
+                        <i class="fa fa-gnupg" aria-hidden="true"></i>
+                    </td>
+                    <td>
+                        <a class="{{ gtv.link_style }}" href=""></a>
+                    </td>
+                </tr>
+                -->
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html.jinja" %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<h1 data-i18n="blog_h1">Blog</h1>
+<div class="ps-3">
+    <span data-i18n="blog_span">Mostly my thoughts on technical stuff I find interesting or useful. <a class="{{ gtv.link_style }}" href="rss.xml">RSS feed</a>.</span>
+</div>
+
+<h2 class="mt-2" data-i18n="blog_h2">Articles</h2>
+<div class="ps-3">
+    {% for metadata in tv.metadata_list %}
+    <div class="ps-3 pe-3 pt-2 pb-2 mb-3 rounded border bg-body-tertiary">
+        <div class="d-flex align-items-baseline">
+            <a class="{{ gtv.link_style }}" href="{{ metadata.path }}">
+                <h4>{{ metadata.title }}</h4>
+            </a>
+            <h6 class="ms-2 fw-semibold text-muted">{{ metadata.published_web }}</h6>
+        </div>
+        <span>{{ metadata.description }}</span>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

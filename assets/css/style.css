@@ -1,0 +1,50 @@
+html {
+    transition: opacity 0.45s;
+}
+
+.limitwidth-90 {
+    width: 90px;
+}
+
+.user-select-all {
+    user-select: all;
+}
+
+/*
+ * Bootstrap adjustments
+ */
+
+[data-bs-theme="dark"] {
+    --bs-body-font-size: 1.15rem;
+    --bs-tertiary-bg: #282d32;
+    --bs-tertiary-bg-rgb: 39, 44, 48;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600; /* overridden from 500 */
+}
+
+/* Overwrite bootstrap paragrph margin by -0.5 rem */
+p {
+    margin-bottom: 0.5rem;
+}
+
+/*
+ * pygments.css adjustments
+ */
+
+div.highlight {
+    padding: 1rem;
+    border-radius: var(--bs-border-radius);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+pre {
+    margin-bottom: 0;
+}

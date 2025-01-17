@@ -1,0 +1,33 @@
+{% extends "base.html.jinja" %}
+
+{% block title %}Blog{% endblock %}
+{% block head %}
+{{ super() -}}
+{% filter indent(width=8, first=True) %}
+<link href="/assets/pygments.css" rel="stylesheet"/>
+{% endfilter %}
+{% endblock %}
+
+{% block content %}
+<h1 class="mb-0">{{ tv.metadata.title }}</h1>
+
+{% if tv.metadata.updated_web %}
+<div>
+    <span class="limitwidth-90 d-inline-block text-muted">Published</span>
+    <span class="text-muted fw-semibold">{{ tv.metadata.published_web }}</span>
+</div>
+<div>
+    <span class="limitwidth-90 d-inline-block text-muted">Updated</span>
+    <span class="text-muted fw-semibold">{{ tv.metadata.updated_web }}</span>
+</div>
+{% else %}
+<div>
+    <span style="width: 90px;" class="d-inline-block text-muted">Published</span>
+    <span class="text-muted fw-semibold">{{ tv.metadata.published_web }}</span>
+</div>
+{% endif %}
+
+<div class="mt-4 mb-5">
+{{ tv.html_content }}
+</div>
+{% endblock %}
