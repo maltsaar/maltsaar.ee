@@ -1,10 +1,10 @@
 import logging
-from .log import create_logger
-from .core import create_website
+from create_website.log import create_logger
+from create_website.core import create_website
 from pathlib import Path
 import shutil
 from os import environ
-from .configuration import OUTPUT_DIRECTORY
+from create_website.configuration import OUTPUT_DIRECTORY
 
 def main() -> None:
     create_logger()
