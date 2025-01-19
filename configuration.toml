@@ -42,7 +42,7 @@ for_page = "blog"
 
 # these jinja2 variables are only available for the index.html.jinja template
 [pages.index.template_vars]
-photo = "/assets/images/me.jpeg"
+photo = "/assets/images/me.webp"
 
 [pages.404]
 root = true
