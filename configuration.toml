@@ -6,7 +6,7 @@ pygments_theme = "github-dark"
 
 [blog.rss]
 # Must contain: scheme, host, port (Only if not 443 or 80)
-base_url = "http://localhost:8000"
+base_url = "https://maltsaar.ee"
 language = "en"
 title = "Robert Maltsaar"
 description = "Mostly my thoughts on technical stuff I find interesting or useful."
