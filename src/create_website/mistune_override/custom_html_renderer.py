@@ -37,9 +37,6 @@ class CustomHTMLRenderer(HTMLRenderer):
             id = re.sub("[^a-zA-Z0-9-]+", '', id_from_text)
             return f"<h{str(level)} class=\"mt-4\" id=\"{id}\">{text}</h{str(level)}>\n"
 
-    def paragraph(self, text: str) -> str:
-        return f"<p class=\"mb-0\">{text}</p>\n"
-
     def link(self, text: str, url: str, title: Optional[str] = None) -> str:
         style = "link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
 
