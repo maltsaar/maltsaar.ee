@@ -116,6 +116,9 @@ def create_blog_pages(blog_output_directory: Path, global_template_vars: dict) -
 def create_blog_index(blog_output_directory: Path, metadata_list: list, global_template_vars: dict) -> None:
     log.info("Creating blog index")
 
+    # Sort by "published" descending
+    metadata_list.sort(key=lambda x: datetime.fromisoformat(x["published"]), reverse=True)
+
     file_path = blog_output_directory / "index.html"
     render_template("blog-index", file_path, {
         "gtv": global_template_vars,
