@@ -10,7 +10,7 @@ What came to me as a big surprise is that achieving this is actually somewhat co
 
 With the help of AI and some troubleshooting this is what I ended up coming up with.
 
-## The core script
+# The core script
 
 Here's a breakdown of the core script `wg_browser_ns.sh`:
 
@@ -70,7 +70,7 @@ ip netns exec vpn-ns microsocks -i 127.0.0.1 -p 1081 &
 socat TCP-LISTEN:1080,fork,reuseaddr EXEC:/usr/local/bin/forward-socks-traffic
 ```
 
-## Making it so Firefox can connect to the proxy
+# Making it so Firefox can connect to the proxy
 
 A little trick is used in `wg_browser_ns.sh` so Firefox can access the socks proxy. We forward traffic from the host into the namespace via socat:
 
@@ -84,7 +84,7 @@ The proxy script `forward-socks-traffic` looks like this:
 exec ip netns exec vpn-ns socat STDIO TCP4:127.0.0.1:1081
 ```
 
-## Setting up wireguard configuration
+# Setting up wireguard configuration
 
 `/etc/wireguard/wireguard.conf` in this example is just a standard wireguard configuration file.
 
@@ -101,7 +101,7 @@ After this make a copy of your current resolv.conf file:
 cp /etc/resolv.conf /etc/resolv.conf.wgbackup
 ```
 
-## Creating the systemd service
+# Creating the systemd service
 
 I have the following systemd unit in `/etc/systemd/system/wg-browser-ns.service`:
 
@@ -128,7 +128,7 @@ systemctl enable wg-browser-ns.service
 systemctl start wg-browser-ns.service
 ```
 
-## Configuring socks proxy in firefox
+# Configuring socks proxy in firefox
 
 In Firefox it's as simple as just navigating to Settings -> Network Settings and setting your proxy settings as follows:
 

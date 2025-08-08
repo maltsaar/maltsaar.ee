@@ -9,7 +9,7 @@ This is useful if you want to use a BDF format font as your Linux TTY console fo
 
 This guide takes some liberties in assuming you are using Arch Linux but it should be fairly straightforward on other distros.
 
-## Convert BDF to PSF format
+# Convert BDF to PSF format
 
 Install bdf2psf
 ```shell
@@ -23,13 +23,13 @@ sudo bdf2psf --fb scientifica-11.bdf \
     512 scientifica-psf.psf
 ```
 
-## Change TTY font
+# Change TTY font
 
 ```shell
 setfont scientifica-psf.psf
 ```
 
-## Change TTY font permanently
+# Change TTY font permanently
 
 Move font to `/usr/share/kbd/consolefonts`
 ```shell
@@ -47,7 +47,7 @@ Rebuild initramfs
 mkinitcpio -P
 ```
 
-## What if I have a hiDPI screen?
+# What if I have a hiDPI screen?
 
 You can make the font 2x bigger
 ```shell

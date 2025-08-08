@@ -35,7 +35,17 @@ class CustomHTMLRenderer(HTMLRenderer):
             id_from_text = text.replace(" ", "-").lower()
             # remove all special characters besides hyphens
             id = re.sub("[^a-zA-Z0-9-]+", '', id_from_text)
-            return f"<h{str(level)} class=\"mt-4\" id=\"{id}\">{text}</h{str(level)}>\n"
+
+        # Display <h1> as <h2> and so on because the former is used in the blog title
+        level += 1
+
+        heading = f"<h{str(level)} class=\"mt-4\" id=\"{id}\">{text}</h{str(level)}>"
+
+        # Add an underline for h2 because it's the highest heading level
+        if level == 2:
+            heading = f"{heading}<hr>\n"
+        
+        return f"{heading}\n"
 
     def link(self, text: str, url: str, title: Optional[str] = None) -> str:
         style = "link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
